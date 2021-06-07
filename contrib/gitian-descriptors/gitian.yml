@@ -1,7 +1,7 @@
 ---
 name: "learncoin"
 suites:
-- "lucid"
+- "trusty"
 architectures:
 - "i386"
 - "amd64"
