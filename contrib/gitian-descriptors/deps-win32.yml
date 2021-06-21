@@ -1,5 +1,5 @@
 ---
-name: "bitcoin-deps"
+name: "learncoin-deps"
 suites:
 - "trusty"
 architectures:
@@ -46,9 +46,9 @@ script: |
   #
   tar xzf db-4.8.30.NC.tar.gz
   cd db-4.8.30.NC/build_unix
-  ../dist/configure --prefix=$INSTALLPREFIX --enable-mingw --enable-cxx --host=$HOST --disable-shared
+  ../dist/configure --prefix=$INSTALLPREFIX --enable-mingw --enable-cxx --host=$HOST --disable-shared --disable-replication
   make $MAKEOPTS library_build -i --ignore-errors
-  make install_lib install_include -i --ignore-errors
+  make install_lib install_include
   cd ../..
   #
   tar xzf miniupnpc-1.9.20140401.tar.gz
